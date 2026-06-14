@@ -277,7 +277,7 @@ body.sub-page {
 }
 .policy-description {
     text-align: left;       /* 正文左对齐 */
-    font-size: 15px;        /* 正文字号 */
+    font-size: 12px;        /* 正文字号 */
     line-height: 1.7;       /* 行高，提升阅读舒适度 */
     margin: 0 0 12px;       /* 段落底部间距 */
 }
@@ -286,3 +286,22 @@ body.sub-page {
     padding: 0 10px;
 }
 
+/* 新增：隐私政策按钮样式 */
+.policy-btn-wrap {
+    text-align: center;
+    padding: 50px 20px; /* 加大上下间距 */
+}
+.policy-link {
+    font-size: 24px;     /* 放大文字 */
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ffffff;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+    font-weight: 500;    /* 轻微加粗，更醒目 */
+}
+.policy-link:hover {
+    color: #ffffff;
+    background-color: #f5f9ff;
+    border-radius: 4px;
+}
