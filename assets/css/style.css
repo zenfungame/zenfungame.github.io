@@ -37,13 +37,13 @@ body.main-page {
 
 /* ========== 子页面样式 ========== */
 body.sub-page {
-    background-color: #ffffff; /* 在这里改子页面背景色 */
+    background-color: #ffffff;
     color: #333333;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-/* 导航栏 */
+/* 导航栏基础 */
 .nav {
     background-color: transparent;
     padding: 15px 0;
@@ -65,7 +65,6 @@ body.sub-page {
     margin-left: 30px;
     padding: 8px 12px;
     display: inline-block;
-    /* 使用 Roboto 字体 */
     font-family: "Roboto-Regular", Arial, sans-serif;
 }
 
@@ -75,7 +74,7 @@ body.sub-page {
     font-family: "Roboto-Bold", Arial, sans-serif;
 }
 
-/* 下拉菜单核心样式 */
+/* 下拉菜单核心样式 —— 自适应宽度 + 保留原有留白/圆角/间距 */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -85,19 +84,25 @@ body.sub-page {
     display: none;
     position: absolute;
     background-color: #444444;
-    min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
-    border-radius: 6px;
+    border-radius: 10px;
     right: 0;
+    padding: 10px 0;
+    overflow: hidden;
+    width: auto;
+    white-space: nowrap;
 }
 
 .dropdown-menu a {
     color: white;
-    padding: 12px 16px;
+    padding: 12px 22px;
+    margin: 4px 10px;
     text-decoration: none;
     display: block;
+    border-radius: 6px;
     font-family: "Roboto-Regular", Arial, sans-serif;
+    transition: background-color 0.2s ease;
 }
 
 .dropdown-menu a:hover {
@@ -139,8 +144,8 @@ body.sub-page {
 }
 
 .content p {
-    font-size: 18px;
-    color: #cccccc;
+    font-size: 20px;
+    color: #757575;
     font-family: "Roboto-Regular", Arial, sans-serif;
 }
 
@@ -153,3 +158,131 @@ body.sub-page {
     color: #aaaaaa;
     font-family: "Roboto-Regular", Arial, sans-serif;
 }
+
+/* 图文容器整体宽度限制 */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 图片容器：居中 + 留白 */
+.homeabout-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+/* 图片统一等比例缩放（全局生效） */
+.homeabout-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 文字区域左右留白，限定阅读范围 */
+.homeabout-info {
+    padding: 0 20px;
+}
+
+.homeabout-info p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* ========== 下载区块样式 ========== */
+.section.trial {
+    margin: 80px 0;
+}
+
+.trial-content-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    background-color: #0F2B5B;
+}
+
+.trial-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.trial-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trial-content {
+    padding: 60px 40px;
+    position: relative;
+    z-index: 1;
+}
+.trial-content h3 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.trial-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+/* 下载按钮列表 */
+.divider-applist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.divider-applist li {
+    margin: 0;
+}
+.app-icons img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+/* 右侧手机图片 */
+.Banner_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+}
+.Banner_image img {
+    max-height: 400px;
+    width: auto;
+}
+
+/* 隐私政策板块：左对齐 + 调整字体大小、行高、间距 */
+.policy-main-heading {
+    text-align: left;       /* 标题左对齐 */
+    font-size: 25px;        /* 标题字号 */
+    font-weight: bold;      /* 标题加粗 */
+    margin: 24px 0 10px;    /* 上下外边距 */
+}
+.policy-description {
+    text-align: left;       /* 正文左对齐 */
+    font-size: 15px;        /* 正文字号 */
+    line-height: 1.7;       /* 行高，提升阅读舒适度 */
+    margin: 0 0 12px;       /* 段落底部间距 */
+}
+/* 容器整体左右留白，避免文字贴边 */
+.privacy-policy-wrapper {
+    padding: 0 10px;
+}
+

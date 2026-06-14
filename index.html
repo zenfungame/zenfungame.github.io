@@ -56,6 +56,13 @@
             opacity: 1;
             visibility: visible;
         }
+
+        /* 新增：导航按钮图片样式 */
+        .nav-img-btn {
+            height: 32px;   /* 控制图片高度，自行微调 */
+            width: auto;
+            display: block;
+        }
     </style>
 </head>
 <!-- 加上 class="main-page"，才能读取外部样式里的主页背景色 -->
@@ -70,9 +77,12 @@
         </div>
 
         <div class="nav-box">
-            <!-- 游戏下拉菜单 -->
+            <!-- 游戏下拉菜单 → 文字替换为图片 -->
             <div class="dropdown">
-                <a href="#" class="nav-item">Games ▾</a>
+                <!-- 【改动处】把 a 标签内文字换成图片，替换你的图片路径 -->
+                <a href="#">
+                    <img src="images/icon-menu.png" alt="Games" class="nav-img-btn">
+                </a>
                 <div class="dropdown-menu">
                     <a href="minesweeper-gm.html">Minesweeper GM</a>
                     <a href="sudoku_time.html">Vinci's Sudoku Time</a>
