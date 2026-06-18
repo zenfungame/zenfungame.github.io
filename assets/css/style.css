@@ -187,7 +187,7 @@ body.sub-page {
 }
 
 .homeabout-info p {
-    line-height: 1.8;
+    line-height: 1.5;
     margin-bottom: 1rem;
 }
 
@@ -224,12 +224,12 @@ body.sub-page {
     z-index: 1;
 }
 .trial-content h3 {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 .trial-content p {
-    font-size: 1.1rem;
+    font-size: 16px;
     line-height: 1.8;
     margin-bottom: 30px;
     max-width: 500px;
